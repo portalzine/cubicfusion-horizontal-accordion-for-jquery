@@ -1,0 +1,47 @@
+body{margin:100px; margin-top: 20px;}
+* {
+	font:Verdana, Arial, sans-serif
+}
+h2 {
+	background: #ECECEC;
+	padding:5px;
+	border-radius:5px;
+	text-align:right;
+	padding-right:30px;
+	border-right:6px solid #81a61c;
+	font-size: 18px;
+}
+.greenButton {
+	border:0;
+	padding:10px;
+	color: white;
+	background:#81a61c;
+	border-radius:5px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.blueButton {
+	border:0;
+	padding:10px;
+	color: white;
+	background:blue;
+	border-radius:5px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.greenButton:hover, .blueButton:hover {
+	background:red
+}
+
+ul.info {
+	border:1px solid #ccc;
+	border-radius:5px;
+	padding:20px;
+	padding-left:30px;
+	margin:0;
+	margin-bottom:20px;
+}
+.exampleList {margin:0;padding:0;}
+.exampleList li{list-style:none;float: left;margin:10px;width:90px;padding:5px; text-align: center;}
+.exampleList li a{text-decoration: none; color: black;font-weight: bold; border:1px solid #ccc;border-radius:5px;padding:10px;}
+.exampleList li a:hover{ color: red;font-weight: bold;border:2px solid red }

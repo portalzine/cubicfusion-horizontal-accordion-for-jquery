@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="examples/default.example.page.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.hrzAccordion.defaults.css">
+<link rel="stylesheet" type="text/css" href="examples/default.examples.css">
+<link rel="stylesheet" type="text/css" href="examples/css/example3.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- Optional / additional easing functionality -->
+<script type="text/javascript" src="lib/jquery.easing.1.3.js"></script>
+<!-- Required to fix resizing for IE -->
+<script type="text/javascript" src="lib/jquery.ba-resize.min.js"></script>
+<script type="text/javascript" src="lib/jquery.hrzAccordion.js"></script>
+<script type="text/javascript" src="examples/default.examples.js"></script>
+<script type="text/javascript" src="examples/js/example3.js"></script>
+<title>Example 3 - jQuery - Horizontal Accordion 2.60</title>
+</head>
+<body>
+<div id="demoPage">
+
+<h2>Example 3</h2>
+<ul  class="info">
+<li>handle aligned to the right</li>
+<li>animation is closing content first before opening again</li>
+<li>event trigger is mouse click</li>
+</ul>
+
+<button  class="greenButton showMe" data-id="test3" data-load="0">Open Content 1</button>  <button   class="greenButton showMe" data-id="test3" data-load="1">Open Content 2</button>  
+<button  class="greenButton showMe" data-id="test3" data-load="2">Open Content 3</button>  <button   class="greenButton showMe" data-id="test3" data-load="3">Open Content 4</button> <button   class="greenButton showMe" data-id="test3" data-load="4">Open Content 5</button><br /><br />
+<ul class="test3">
+  <li><div class="handle">1</div><img src='examples/images/image_test.gif' align='left' class="testImage">
+    <h3>Content 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vestibulum metus sed massa. Pellentesque pharetra felis a enim. Aliquam sapien nisl, iaculis ac, hendrerit placerat, iaculis congue, augue. Quisque eget mi quis purus vestibulum eleifend. Maecenas condimentum eros vel eros. Ut facilisis leo id mi. Suspendisse nisl magna, consequat quis, pretium eget, laoreet vel, orci.<br>
+      <br>
+      Mauris sed mauris. Praesent imperdiet, nunc ut sollicitudin hendrerit, nisi tellus mollis leo, blandit pharetra nulla orci id eros. Nullam ut nunc. Praesent lacus lacus, tempor a, dignissim eu, tristique ac, tortor. Sed faucibus. Integer eleifend lacus ac neque. Fusce tempus. In hac habitasse platea dictumst. Nulla arcu neque, gravida at, rhoncus id, pharetra vitae, tortor. Aenean vestibulum consequat augue.</p>
+  </li>
+  <li><div class="handle">2</div><img src='examples/images/image_test.gif' align='left' class="testImage">
+    <h3>Content 2</h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vestibulum metus sed massa. Pellentesque pharetra felis a enim. Aliquam sapien nisl, iaculis ac, hendrerit placerat, iaculis congue, augue. Quisque eget mi quis purus vestibulum eleifend. Maecenas condimentum eros vel eros. Ut facilisis leo id mi. Suspendisse nisl magna, consequat quis, pretium eget, laoreet vel, orci.<br>
+      <br>
+      Mauris sed mauris. Praesent imperdiet, nunc ut sollicitudin hendrerit, nisi tellus mollis leo, blandit pharetra nulla orci id eros. Nullam ut nunc. Praesent lacus lacus, tempor a, dignissim eu, tristique ac, tortor. Sed faucibus. Integer eleifend lacus ac neque. Fusce tempus. In hac habitasse platea dictumst. Nulla arcu neque, gravida at, rhoncus id, pharetra vitae, tortor. Aenean vestibulum consequat augue.</p>
+  </li>
+  <li><div class="handle">3</div><img src='examples/images/image_test.gif' align='left' class="testImage">
+    <h3>Content 3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vestibulum metus sed massa. Pellentesque pharetra felis a enim. Aliquam sapien nisl, iaculis ac, hendrerit placerat, iaculis congue, augue. Quisque eget mi quis purus vestibulum eleifend. Maecenas condimentum eros vel eros. Ut facilisis leo id mi. Suspendisse nisl magna, consequat quis, pretium eget, laoreet vel, orci.<br>
+      <br>
+      Mauris sed mauris. Praesent imperdiet, nunc ut sollicitudin hendrerit, nisi tellus mollis leo, blandit pharetra nulla orci id eros. Nullam ut nunc. Praesent lacus lacus, tempor a, dignissim eu, tristique ac, tortor. Sed faucibus. Integer eleifend lacus ac neque. Fusce tempus. In hac habitasse platea dictumst. Nulla arcu neque, gravida at, rhoncus id, pharetra vitae, tortor. Aenean vestibulum consequat augue.</p>
+  </li>
+  <li><div class="handle">4</div><img src='examples/images/image_test.gif' align='left' class="testImage">
+    <h3>Content 4</h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vestibulum metus sed massa. Pellentesque pharetra felis a enim. Aliquam sapien nisl, iaculis ac, hendrerit placerat, iaculis congue, augue. Quisque eget mi quis purus vestibulum eleifend. Maecenas condimentum eros vel eros. Ut facilisis leo id mi. Suspendisse nisl magna, consequat quis, pretium eget, laoreet vel, orci.<br>
+      <br>
+      Mauris sed mauris. Praesent imperdiet, nunc ut sollicitudin hendrerit, nisi tellus mollis leo, blandit pharetra nulla orci id eros. Nullam ut nunc. Praesent lacus lacus, tempor a, dignissim eu, tristique ac, tortor. Sed faucibus. Integer eleifend lacus ac neque. Fusce tempus. In hac habitasse platea dictumst. Nulla arcu neque, gravida at, rhoncus id, pharetra vitae, tortor. Aenean vestibulum consequat augue.</p>
+  </li>
+  <li><div class="handle">5</div><img src='examples/images/image_test.gif' align='left' class="testImage">
+    <h3>Content 5</h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus vestibulum metus sed massa. Pellentesque pharetra felis a enim. Aliquam sapien nisl, iaculis ac, hendrerit placerat, iaculis congue, augue. Quisque eget mi quis purus vestibulum eleifend. Maecenas condimentum eros vel eros. Ut facilisis leo id mi. Suspendisse nisl magna, consequat quis, pretium eget, laoreet vel, orci.<br>
+      <br>
+      Mauris sed mauris. Praesent imperdiet, nunc ut sollicitudin hendrerit, nisi tellus mollis leo, blandit pharetra nulla orci id eros. Nullam ut nunc. Praesent lacus lacus, tempor a, dignissim eu, tristique ac, tortor. Sed faucibus. Integer eleifend lacus ac neque. Fusce tempus. In hac habitasse platea dictumst. Nulla arcu neque, gravida at, rhoncus id, pharetra vitae, tortor. Aenean vestibulum consequat augue.</p>
+  </li>
+</ul>
+<br style="clear: both" />
+<ul class="exampleList">
+<li><a href="index.html" >Index</a></li><li><a href="index-1.html" >Demo 1</a></li>
+<li><a href="index-2.html" >Demo 2</a></li>
+<li><a href="index-3.html" >Demo 3</a></li>
+<li><a href="index-4.html" >Demo 4</a></li>
+<li><a href="index-5.html" >Demo 5</a></li>
+<li><a href="index-6.html" >Demo 6</a></li>
+<li><a href="index-7.html">Demo 7</a></li>
+</ul><br style="clear: both" /><br />
+<div style="text-align: center;color: gray; border-top: 1px solid gray;padding:20px;font-size:13px;text-transform: uppercase">&copy;2015 portalZINE&reg; NMN. All rights reserved.</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/*Example 2 */
+ .handle2 {
+	float: left;
+	width: 32px;
+	height: 310px;
+	margin: 1px;
+	background:none;
+	background-color: #81a61c;
+	border:1px solid gray;
+	border-radius:5px;
+	text-align:center;
+	padding-top:10px;
+	font-weight: bold;
+	color: white;
+	font-size: 15px;
+}
+.handleOver2 {
+ background:none;
+ background-color: red;
+ border:1px solid gray;
+ border-radius:5px;
+}
+.handleSelected2 {
+	background:none;
+	background-color: blue;
+	border:1px solid gray;
+	border-radius:5px;
+}
+.toggleClass {
+	color: red;
+}

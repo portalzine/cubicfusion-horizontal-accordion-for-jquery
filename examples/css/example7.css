@@ -1,0 +1,82 @@
+/*Example 7*/
+/*Main Container*/
+.container7 {
+	float:right;width:80%;
+	border:1px solid black;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.container7:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.container7 > ul {
+	list-style-type: none;
+	margin: 0px;
+	padding:0px;
+}
+.container7 > ul > li {
+	display: inline;
+	margin: 0px;
+	padding:0px;
+}
+
+.contentWrapper7 {
+	text-align: justify;
+}
+.contentInnerWrapper7 {
+	padding: 30px;
+}
+.contentWrapper7 h3 {
+	border-bottom: 1px solid silver;
+	color: #1E90FF;
+	text-transform:uppercase;
+}
+
+/*Handle*/
+.handle7 {
+	float: left;
+	width: 0px;
+	height: 314px;
+	text-align:center;
+	background: #666;
+	border: 1px solid white;
+}
+.handle7 img {
+	margin-top:2px;
+	filter:alpha(opacity=80);
+	-moz-opacity:.80;
+	opacity:.80;
+}
+.handleOver7 {
+	background: red;
+	border: 1px solid white;
+}
+.handleOver7 img {
+	margin-top:2px;
+	filter:alpha(opacity=70);
+	-moz-opacity:.70;
+	opacity:.70;
+}
+.handleSelected7 {
+	background: #000;
+	border: 1px solid white;
+}
+
+.handleSelected7 {
+
+}
+.handleOver7 {
+	
+}
+.contentInnerWrapper7 {
+	padding: 30px;
+}
+.contentInnerWrapper7 h3 {
+	border-bottom: 1px solid silver;
+	color: #81a61c;
+	text-transform:uppercase;
+}

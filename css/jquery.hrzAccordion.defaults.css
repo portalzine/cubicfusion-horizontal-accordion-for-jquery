@@ -1,0 +1,71 @@
+/*Main Container*/
+.container {
+	width:100%;
+	border:1px solid black;
+	border-radius: 5px;
+	
+}
+.container:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	clear: both;
+	font-size:1px;
+}
+.container > ul {
+	list-style-type: none;
+	margin: 0;
+	padding:0;
+}
+.container > ul > li {
+	display: inline;
+	margin:0;
+	padding:0;
+}
+/*Content Container*/
+.contentContainer {
+	padding: 0;
+	margin:0;
+	float: left;
+	
+	width:0px;
+	height: 310px;
+	overflow:hidden;
+}
+.contentWrapper {
+	
+}
+.contentInnerWrapper {
+	padding:40px;
+	
+}
+/* Handle*/
+.handle {
+	padding: 0;
+	float: left;
+	width: 32px;
+	height: 310px;
+	margin: 1px;
+	background:none;
+	background-color: #81a61c;
+	border-radius:5px;
+	text-align:center;
+	padding-top:10px;
+	color: white;
+	font-size: 15px;
+	overflow: hidden;
+}
+
+.handleOver {
+	background-color: red;
+	
+}
+.handleSelected {
+	background-color: blue;
+	
+}
+

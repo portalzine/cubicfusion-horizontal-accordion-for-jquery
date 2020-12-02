@@ -1,0 +1,20 @@
+/* Example5*/
+.handle5 {
+	position: relative;
+	border:none;
+	float: left;
+	width: 38px;
+	height: 310px;
+	margin: 1px;
+	margin-right: -12px;
+	background:  url(../images/blade.png) no-repeat;
+}
+.handleOver5 {
+	background: url(../images/blade_sel.png) no-repeat;
+}
+.handleSelected5 {
+	background: url(../images/blade_sel.png) no-repeat;
+}
+.contentInnerWrapper5 {
+	padding:20px;
+}

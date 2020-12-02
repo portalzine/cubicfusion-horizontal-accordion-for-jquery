@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="examples/default.example.page.css">
+<link rel="stylesheet" type="text/css" href="examples/default.examples.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<title>jQuery - Horizontal Accordion</title>
+</head>
+<body>
+<div id="demoPage" class="container">
+
+<h2>jQuery - Horizontal Accordion - Docs</h2>
+
+
+			<h2>DEPENDENCIES / TIPS</h2>
+<ul>
+<li>jQuery 1.7+ / 1.8+ / 1.9+</li>
+<li>jQuery Easing (optional)</li>
+</ul>
+<h2>Tips</h2>
+<div>
+<ul>
+<li>Make sure to load the css definitions before you load jQuery</li>
+<li>When adding Youtube videos, make sure that the wmode is set to opaque, just add “&amp;wmode=opaque” to the video url.</li>
+<li>Use Child selectors to prevent inline lists to be handled by the main stylesheet. “.container &gt; ul &gt; li”.&nbsp;Use&nbsp;<a href="https://web.archive.org/web/20150806015359/http://selectivizr.com/" target="_blank">http://selectivizr.com/&nbsp;</a>to simulate and use them in IE</li>
+<li>Bad fonts rendering on IE (Cleartype)<br>
+– check for a windows hotfix<br>
+– set a fixed background color for the container.</li>
+<li>Apply “position: relative” to content wrappers, to use absolute positioning within.</li>
+</ul>
+<h2>EXAMPLE CALLS &amp; OPTIONS:</h2>
+<p>The package includes many detailed examples to get you started.</p>
+<p>Here an example:</p>
+<pre class="theme:github lang:js decode:true "><code>$(document).ready(function () {
+    $(".test").hrzAccordion({       
+		eventTrigger: "mouseover",
+        openOnLoad: 1,
+        cycle: true,
+        mouseEnterFunctionName: "mouseEnterTest",
+        mouseLeaveFunctionName: "mouseLeaveTest",
+        eventAction: function (i) {
+            $("#eventRunning").html(" Opening - " + (i + 1));
+        },
+        completeAction: function (i) {
+            $("#eventRunning").html(" Completed - " + (i + 1));
+        }
+    });	
+	var test = window.setInterval(function(){
+		var data 		= $(".test").hrzAccordion('loopStatus');
+		var instance 	= $(".test").hrzAccordion("instanceStatus");
+
+		$("#statusCheck").html(data.status)
+		$("#widthCheck").html("Container "+instance.containerWidth+"px / Content "+instance.finalWidth+"px")
+		 },2000);	
+});
+function mouseEnterTest() {
+    $(".status").html("entering")
+};
+function mouseLeaveTest() {
+    $(".status").html("leaving")
+};</code></pre>
+<p><a name="options"></a></p>
+<h1>OPTIONS VERSION &gt;= 2.6</h1>
+<p>The current plugin provides some simple options to alter its look and behavior.</p>
+<p>
+</p><table id="tablepress-2-no-2" class="table">
+<thead>
+<tr class="row-1 odd">
+	<th class="column-1">Option</th><th class="column-2">Default</th><th class="column-3">Description</th>
+</tr>
+</thead>
+<tbody class="row-hover">
+<tr class="row-2 even">
+	<td class="column-1">containerClass</td><td class="column-2">"container"</td><td class="column-3">The div container wrapped around the whole list.</td>
+</tr>
+<tr class="row-3 odd">
+	<td class="column-1">listItemClass</td><td class="column-2">"listItem"</td><td class="column-3">Class assigned to each list item</td>
+</tr>
+<tr class="row-4 even">
+	<td class="column-1">contentContainerClass	</td><td class="column-2">"contentContainer"</td><td class="column-3">Class that defines the actual container for the content that will be animated</td>
+</tr>
+<tr class="row-5 odd">
+	<td class="column-1">contentWrapper</td><td class="column-2">"contentWrapper"</td><td class="column-3">A container wrapped around the content to apply special layout definitions</td>
+</tr>
+<tr class="row-6 even">
+	<td class="column-1">contentInnerWrapper</td><td class="column-2">"contentInnerWrapper"</td><td class="column-3">Another inner container wrapped around the content</td>
+</tr>
+<tr class="row-7 odd">
+	<td class="column-1">handleClass</td><td class="column-2">"handle"</td><td class="column-3">Class that defines the look of the handle, this handles the open and close event for each blind <br>
+</td>
+</tr>
+<tr class="row-8 even">
+	<td class="column-1">handleClassOver</td><td class="column-2">"handleOver"</td><td class="column-3">Class that defines the mouse over event for the handle</td>
+</tr>
+<tr class="row-9 odd">
+	<td class="column-1">handleClassSelected</td><td class="column-2">"handleSelected"</td><td class="column-3">Class that defines the select status of the handle</td>
+</tr>
+<tr class="row-10 even">
+	<td class="column-1">handlePosition</td><td class="column-2">"left"</td><td class="column-3">Position of the handle (left | right | bottom | top)</td>
+</tr>
+<tr class="row-11 odd">
+	<td class="column-1">handlePositionArray</td><td class="column-2">"left,left,right,right,right"</td><td class="column-3">Position each handle differently</td>
+</tr>
+<tr class="row-12 even">
+	<td class="column-1">closeEaseAction</td><td class="column-2">"swing"</td><td class="column-3">The close easing animation</td>
+</tr>
+<tr class="row-13 odd">
+	<td class="column-1">closeSpeed</td><td class="column-2">500<br>
+</td><td class="column-3">The closing speed</td>
+</tr>
+<tr class="row-14 even">
+	<td class="column-1">openEaseAction</td><td class="column-2">500</td><td class="column-3">The open easing animation</td>
+</tr>
+<tr class="row-15 odd">
+	<td class="column-1">openOnLoad</td><td class="column-2">1</td><td class="column-3">Define which container to show on page load. (false, 1, 2, 3, ....)</td>
+</tr>
+<tr class="row-16 even">
+	<td class="column-1">hashPrefix</td><td class="column-2">"tab"</td><td class="column-3">Allows you to open containers using a hash tag in the url (index.html#tab1). This defines the prefix to be used.</td>
+</tr>
+<tr class="row-17 odd">
+	<td class="column-1">mouseEnterFunctionName</td><td class="column-2">function name</td><td class="column-3">External function called when mouse enters container</td>
+</tr>
+<tr class="row-18 even">
+	<td class="column-1">mouseLeaveFunctionName</td><td class="column-2">function name</td><td class="column-3">External function called when mouse leaves container</td>
+</tr>
+<tr class="row-19 odd">
+	<td class="column-1">evenAction</td><td class="column-2">function(i){}</td><td class="column-3">Function to be executed on trigger event (click, mouseover...)</td>
+</tr>
+<tr class="row-20 even">
+	<td class="column-1">eventActionFunctionName</td><td class="column-2">function name</td><td class="column-3">External function to be executed on trigger event (click, mouseover...) The "eventAction" is ignored in that case!</td>
+</tr>
+<tr class="row-21 odd">
+	<td class="column-1">completeAction</td><td class="column-2">function(){}</td><td class="column-3">Function to be executed on completion of the switch</td>
+</tr>
+<tr class="row-22 even">
+	<td class="column-1">completeFunctionName</td><td class="column-2">function name</td><td class="column-3">External function called when the switch completes. The "completeAction" is ignored in that case!</td>
+</tr>
+<tr class="row-23 odd">
+	<td class="column-1">closeOpenAnimation</td><td class="column-2">1</td><td class="column-3">1 - open and close at the same time <br>
+2- close all and than open next<br>
+</td>
+</tr>
+<tr class="row-24 even">
+	<td class="column-1">cycle	</td><td class="column-2">10000</td><td class="column-3">Cycle through containers by interval</td>
+</tr>
+<tr class="row-25 odd">
+	<td class="column-1">fixedWidth</td><td class="column-2">""</td><td class="column-3">Use fixed width for containers. Normally the plugin calculates the width from the main container.</td>
+</tr>
+<tr class="row-26 even">
+	<td class="column-1">eventWaitForAnim</td><td class="column-2">true</td><td class="column-3">Makes sure to allow no new event to be triggered, until animation has ended</td>
+</tr>
+<tr class="row-27 odd">
+	<td class="column-1">onShowFunctionName</td><td class="column-2">function name</td><td class="column-3">External function called when the accordion is made visible</td>
+</tr>
+<tr class="row-28 even">
+	<td class="column-1">showTimeout</td><td class="column-2">1000</td><td class="column-3">delay the display of the accordion in ms</td>
+</tr>
+<tr class="row-29 odd">
+	<td class="column-1">imageSlice</td><td class="column-2">path to image</td><td class="column-3">an image to use for the handle slices (example6)</td>
+</tr>
+<tr class="row-30 even">
+	<td class="column-1">imageSliceOver</td><td class="column-2">path to image</td><td class="column-3">an image to use for the handle over slices (example6)</td>
+</tr>
+</tbody>
+</table>
+<br>
+<a name="methods"></a><p></p>
+<h1>METHODS VERSION &gt;= 2.5/ 2.6</h1>
+<p>The current plugin provides some simple methods to handle external tasks.</p>
+
+<table id="tablepress-3-no-2" class="table">
+<thead>
+<tr class="row-1 odd">
+	<th class="column-1">Method</th><th class="column-2">Usage</th><th class="column-3">Options</th><th class="column-4">Description</th>
+</tr>
+</thead>
+<tbody class="row-hover">
+<tr class="row-2 even">
+	<td class="column-1">show</td><td class="column-2">$(container).hrzAccordion('show',id);</td><td class="column-3">container: same the accordion was applied to <br>
+id: zero based. 0 for first container and so on</td><td class="column-4">Open content on demand. See example provided with your download.</td>
+</tr>
+<tr class="row-3 odd">
+	<td class="column-1">resize</td><td class="column-2">$(container).hrzAccordion('resize');</td><td class="column-3">resize accordion, see default.examples.js for usage</td><td class="column-4">Resize accordion on demand</td>
+</tr>
+<tr class="row-4 even">
+	<td class="column-1">loopStatus</td><td class="column-2">var object = $(container).hrzAccordion('loopStatus');</td><td class="column-3">js object<br>
+object.loop (element number - zero based)<br>
+object.status ("start" or "end") </td><td class="column-4">holds the current status of the loop (example1)</td>
+</tr>
+<tr class="row-5 odd">
+	<td class="column-1">instanceStatus</td><td class="column-2">var object = $(container).hrzAccordion('instanceStatus');</td><td class="column-3">js object<br>
+object.finalWidth (content width)<br>
+object.elementCount (amount of elements)<br>
+object.handleWidth (handle width)<br>
+object.containerWidth (container width)<br>
+object.container (active container number)</td><td class="column-4">holds the current data of the active accordion instance</td>
+</tr>
+<tr class="row-6 even">
+	<td class="column-1">startpause</td><td class="column-2">$(container).hrzAccordion('startpause');</td><td class="column-3">start or pause loop (toggle)</td><td class="column-4">holds teh current status of the loop (example1)</td>
+</tr>
+</tbody>
+</table>
+	<br /><br /><br /><br />
+<br />
+</div>
+
+	
+</body>
+</html>
